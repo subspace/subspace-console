@@ -1,0 +1,47 @@
+{
+  "name": "subspace-console",
+  "version": "0.0.1",
+  "description": "Visual Subspace network explorer",
+  "productName": "Subspace Console",
+  "cordovaId": "org.subspace.debugger",
+  "author": "Eugene Otto <eugene.otto@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "@subspace/jump-consistent-hash": "git+https://c9ed7a77df1c3e0e10413b1580924003c4ae75a3:x-oauth-basic@github.com/subspace/jump-consistent-hash.git",
+    "@subspace/rendezvous-hash": "git+https://c9ed7a77df1c3e0e10413b1580924003c4ae75a3:x-oauth-basic@github.com/subspace/rendezvous-hash.git",
+    "@subspace/subspace": "git+https://c9ed7a77df1c3e0e10413b1580924003c4ae75a3:x-oauth-basic@github.com/subspace/subspace.git#feature/web-debugger",
+    "events": "^3.0.0",
+    "long": "^4.0.0",
+    "quasar": "^1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0-beta.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "devtron": "^1.4.0",
+    "electron": "^4.0.5",
+    "electron-debug": "^2.1.0",
+    "electron-devtools-installer": "^2.2.4",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "strip-ansi": "=3.0.1"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ],
+  "resolutions": {
+    "ajv": "6.8.1"
+  }
+}
