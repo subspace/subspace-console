@@ -93,7 +93,7 @@ export default {
 
 <style lang="scss" scoped>
 .q-header {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .q-item {
