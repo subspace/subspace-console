@@ -2,6 +2,7 @@
 
 ## Installation
 
+`npm install -g @quasar/cli`
 `npm install`
 
 ## Development
