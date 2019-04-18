@@ -70,7 +70,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['nodeId', 'peers']),
+    ...mapState(['nodeId', 'peerIds']),
 
     componentClass() {
       const classes = [ 'message' ]
@@ -86,7 +86,7 @@ export default {
       const colors = [ '#099', '#909', '#900', '#990' ]
       const color = this.message.sender === this.nodeId ?
         '#090' :
-        colors[this.peers.indexOf(this.message.sender) % colors.length]
+        colors[this.peerIds.indexOf(this.message.sender) % colors.length]
 
       return `color: ${color}`
     },

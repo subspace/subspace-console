@@ -49,6 +49,17 @@
         </q-list>
       </q-drawer>
 
+      <q-tabs
+        v-model="tab"
+        align="left"
+        inline-label
+        class="bg-grey-3 full-width align-left"
+      >
+        <q-route-tab name="logs" icon="list" label="Logs" to="/"></q-route-tab>
+        <q-route-tab name="peers" icon="linear_scale" label="Peers" to="/peers"></q-route-tab>
+        <q-route-tab name="tracker" icon="linear_scale" label="Tracker" to="/tracker"></q-route-tab>
+      </q-tabs>
+
       <keep-alive include="messages">
         <router-view />
       </keep-alive>
@@ -71,6 +82,7 @@ export default {
   data () {
     return {
       leftDrawerOpen: true,
+      tab: 'logs',
     }
   },
   methods: {
