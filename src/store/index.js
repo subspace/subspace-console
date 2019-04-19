@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Subspace from '@subspace/subspace/dist/subspace.browser.js'
+import ProxyMap from '../lib/proxy-map'
 
 Vue.use(Vuex)
 
@@ -152,20 +153,14 @@ const store = new Vuex.Store({
         })
       })
 
-      this.dispatch('updateTrackerLht')
-    },
-
-    // Monitor Tracker LHT for updates
-    async updateTrackerLht({ commit }) {
-      setTimeout(() => {
-        const hosts = Array.from(subspace.tracker.lht).reduce(
+      // Monitor Tracker LHT for updates
+      this.state.subspace.tracker = ProxyMap(this.state.subspace.tracker, 'lht', () => {
+        const hosts = Array.from(this.state.subspace.tracker.lht).reduce(
           (hosts, [key, value]) => Object.assign(hosts, {[key]: value})
         , {})
         commit('setTrackerLht', hosts)
-
-        this.dispatch('updateTrackerLht')
-      }, 5000)
-    }
+      })
+    },
   }
 })
 
